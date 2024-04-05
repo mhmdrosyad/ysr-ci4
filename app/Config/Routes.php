@@ -6,8 +6,22 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
-$routes->get('/post', 'Home::post');
-$routes->get('/admin', 'AdminController::index');
-$routes->get('/admin/post/add', 'AdminController::post');
-$routes->get('/login', 'AdminController::login');
-$routes->get('/signup', 'AdminController::register');
+$routes->get('/blog/(:segment)', 'Home::post/$1');
+
+
+$routes->get('admin/login', 'AdminController::login');
+$routes->post('admin/login', 'AdminController::authenticate');
+$routes->get('admin/logout', 'AdminController::logout');
+$routes->post('admin/register', 'AdminController::save');
+$routes->get('admin/signup', 'AdminController::register');
+
+$routes->group('admin', ['filter' => 'auth'], function ($routes) {
+    $routes->get('/', 'AdminController::index');
+    $routes->get('posts', 'PostController::posts');
+    $routes->get('post/add', 'PostController::add');
+    $routes->post('post/add', 'PostController::save');
+    $routes->get('post/delete/(:num)', 'PostController::delete/$1');
+    $routes->get('post/edit/(:num)', 'PostController::edit/$1');
+    $routes->post('post/update', 'PostController::update');
+});
+

@@ -15,16 +15,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="landing-page/fonts/icomoon/style.css">
-    <link rel="stylesheet" href="landing-page/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="<?= base_url('landing-page/fonts/icomoon/style.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('landing-page/fonts/flaticon/font/flaticon.css') ?>">
 
-    <link rel="stylesheet" href="landing-page/css/tiny-slider.css">
-    <link rel="stylesheet" href="landing-page/css/aos.css">
-    <link rel="stylesheet" href="landing-page/css/flatpickr.min.css">
-    <link rel="stylesheet" href="landing-page/css/glightbox.min.css">
-    <link rel="stylesheet" href="landing-page/css/style.css">
-
-    <title>Yayasan Siti Romlah</title>
+    <link rel="stylesheet" href="<?= base_url('landing-page/css/tiny-slider.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('landing-page/css/aos.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('landing-page/css/flatpickr.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('landing-page/css/glightbox.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('landing-page/css/style.css') ?>">
+    <title><?= $title ?? 'Yayasan Siti Romlah' ?></title>
 </head>
 
 <body>
@@ -138,17 +137,17 @@
         </div>
     </div>
 
-    <script src="landing-page/js/bootstrap.bundle.min.js"></script>
-    <script src="landing-page/js/tiny-slider.js"></script>
+    <script src="<?= base_url('landing-page/js/bootstrap.bundle.min.js') ?>"></script>
+    <script src="<?= base_url('landing-page/js/tiny-slider.js') ?>"></script>
 
-    <script src="landing-page/js/flatpickr.min.js"></script>
-    <script src="landing-page/js/glightbox.min.js"></script>
+    <script src="<?= base_url('landing-page/js/flatpickr.min.js') ?>"></script>
+    <script src="<?= base_url('landing-page/js/glightbox.min.js') ?>"></script>
 
 
-    <script src="landing-page/js/aos.js"></script>
-    <script src="landing-page/js/navbar.js"></script>
-    <script src="landing-page/js/counter.js"></script>
-    <script src="landing-page/js/custom.js"></script>
+    <script src="<?= base_url('landing-page/js/aos.js') ?>"></script>
+    <script src="<?= base_url('landing-page/js/navbar.js') ?>"></script>
+    <script src="<?= base_url('landing-page/js/counter.js') ?>"></script>
+    <script src="<?= base_url('landing-page/js/custom.js') ?>"></script>
 </body>
 
 </html>

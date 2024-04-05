@@ -253,7 +253,6 @@
             </div>
         </div>
     </div>
-
 <!-- 
     <div class="section cause-section bg-light">
 
@@ -433,10 +432,10 @@
                     <!-- <h3 class="mb-4 heading text-white" data-aos="fade-up">Rekening Kami </h3> -->
                     <div class="d-flex justify-content-center align-items-center flex-column my-3">
                         <div data-aos="fade-up" class="bg-white p-3 rounded">
-                            <img src="landing-page/images/bri-logo.png" width="150">
+                            <img src="landing-page/images/ibprs-logo.png" width="150">
                         </div>
 
-                        <p data-aos="fade-up" class="mt-3 text-white fw-bold">1370000XXXX an. Winike Kushindrajati Aprilia</p>
+                        <p data-aos="fade-up" class="mt-3 text-white fw-bold">BANK BPRS 1020100897 a.n Agustina Rahmawati, S.E binti Umar S.</p>
                     </div>
                     <!-- <a href="#" class="btn btn-outline-white me-3" data-aos="fade-up" data-aos-delay="100">Become a Volunteer</a> -->
                     <a href="https://wa.link/3xs8dw" class="btn btn-outline-white" data-aos="fade-up" data-aos-delay="200">Konfirmasi Donasi</a>
@@ -500,47 +499,19 @@
                     <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta labore eligendi tempora laudantium voluptate, amet ad libero facilis nihil officiis.</p> -->
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
+            <div class="d-lg-grid program">
+                <?php foreach($posts as $post): ?>
                     <div class="causes-item bg-white">
-                        <a href="#"><img src="landing-page/images/img_v_1-min.jpg" alt="Image" class="img-fluid mb-4 rounded"></a>
+                        <a href="blog/<?= $post['slug']; ?>"><img src="uploads/<?= $post['image_url']; ?>" alt="Image" class="img-fluid mb-4 rounded"></a>
                         <div class="px-4 pb-3 pt-3">
-                            <span class="date">May 11, 2020</span>
-                            <h3><a href="#">Food for the Hungry</a></h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta labore eligendi tempora laudantium voluptate, amet ad libero facilis nihil officiis.</p>
-                            <p><a href="#" class="d-flex align-items-center more2"><span>Read More</span> <span class="icon-chevron-right"></span></a></p>
-
+                            <span class="date"><?= date('j F Y', strtotime($post['created_at'])) ?></span>
+                            <h3><a href="blog/<?= $post['slug']; ?>"><?= $post['title']; ?></a></h3>
+                            <p><?= $post['content'] ?></p>
+                            <p><a href="blog/<?= $post['slug']; ?>" class="d-flex align-items-center more2"><span>Read More</span> <span class="icon-chevron-right"></span></a></p>
 
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="causes-item bg-white">
-                        <a href="#"><img src="landing-page/images/img_v_2-min.jpg" alt="Image" class="img-fluid mb-4 rounded"></a>
-                        <div class="px-4 pb-3 pt-3">
-                            <span class="date">May 11, 2020</span>
-                            <h3><a href="#">Education for Children</a></h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta labore eligendi tempora laudantium voluptate, amet ad libero facilis nihil officiis.</p>
-                            <p><a href="#" class="d-flex align-items-center more2"><span>Read More</span> <span class="icon-chevron-right"></span></a></p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="causes-item bg-white">
-                        <a href="#"><img src="landing-page/images/img_v_3-min.jpg" alt="Image" class="img-fluid mb-4 rounded"></a>
-                        <span class="date">May 11, 2020</span>
-                        <div class="px-4 pb-3 pt-3">
-                            <h3><a href="#">Support Livelihood</a></h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta labore eligendi tempora laudantium voluptate, amet ad libero facilis nihil officiis.</p>
-                            <p><a href="#" class="d-flex align-items-center more2"><span>Read More</span> <span class="icon-chevron-right"></span></a></p>
-
-                        </div>
-                    </div>
-                </div>
-
-
+                <?php endforeach; ?>
 
             </div>
 

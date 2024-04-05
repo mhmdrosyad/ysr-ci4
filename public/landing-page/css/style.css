@@ -9659,6 +9659,7 @@ textarea {
 
 }
 
+
 .program .card {
   min-height: 200px;
 }
@@ -9829,7 +9830,11 @@ blockquote {
   margin-bottom: 50px; }
   .causes-item img {
     border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important; }
+    border-bottom-right-radius: 0 !important; 
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
   .causes-item .progress {
     border-radius: 30px;
     background-color: rgba(89, 136, 107, 0.1);

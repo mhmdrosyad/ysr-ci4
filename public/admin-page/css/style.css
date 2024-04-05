@@ -1961,8 +1961,6 @@ label {
 }
 
 .table-wrapper {
-  overflow-x: auto;
-  overflow-y: hidden;
   margin-bottom: 20px;
 }
 
@@ -3256,6 +3254,7 @@ label {
   width: 71px;
   height: 47px;
   border-radius: 6px;
+  object-fit: cover;
 }
 
 .darkmode {

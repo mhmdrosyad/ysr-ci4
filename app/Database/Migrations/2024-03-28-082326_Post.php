@@ -20,6 +20,10 @@ class Post extends Migration
                 'type'              => 'VARCHAR',
                 'constraint'        => '255'
             ],
+            'slug'          => [
+                'type'              => 'VARCHAR',
+                'constraint'        => '255'
+            ],
             'content'       => [
                 'type'              => 'TEXT'
             ],
@@ -28,6 +32,12 @@ class Post extends Migration
                 'constraint'        => '255',
                 'null'              => TRUE
             ],
+            'author'        => [
+                'type'              => 'VARCHAR',
+                'constraint'        => '50',
+                'null'              => TRUE
+            ]
+            ,
             'meta_desc'     => [
                 'type'              => 'VARCHAR',
                 'constraint'        => '255',
@@ -38,6 +48,10 @@ class Post extends Migration
                 'constraint' => ['publish', 'pending', 'draft'],
                 'default'    => 'pending',
             ],
+            'created_at' => [
+                'type'       => 'date',
+                'default'    => date('Y-m-d')
+            ]
         ]);
         $this->forge->addKey('id', TRUE);
         $this->forge->createTable('posts');

@@ -13,7 +13,7 @@
                 <div class="sidebar-body">
                     <ul class="sidebar-body-menu">
                         <li>
-                            <a class="active" href="/"><span class="icon home" aria-hidden="true"></span>Dashboard</a>
+                            <a class="active" href="/admin"><span class="icon home" aria-hidden="true"></span>Dashboard</a>
                         </li>
                         <li>
                             <a class="show-cat-btn" href="##">
@@ -25,14 +25,14 @@
                             </a>
                             <ul class="cat-sub-menu">
                                 <li>
-                                    <a href="posts.html">All Posts</a>
+                                    <a href="/admin/posts">All Posts</a>
                                 </li>
                                 <li>
-                                    <a href="new-post.html">Add new post</a>
+                                    <a href="/admin/post/add">Add new post</a>
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a class="show-cat-btn" href="##">
                                 <span class="icon folder" aria-hidden="true"></span>Categories
                                 <span class="category__btn transparent-btn" title="Open list">
@@ -132,7 +132,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
             <!-- <div class="sidebar-footer">
                 <a href="##" class="sidebar-user">
                     <span class="sidebar-user-img">
@@ -141,8 +141,8 @@
                         </picture>
                     </span>
                     <div class="sidebar-user-info">
-                        <span class="sidebar-user__title">Nafisa Sh.</span>
-                        <span class="sidebar-user__subtitle">Support manager</span>
+                        <span class="sidebar-user__title">Rosyad</span>
+                        <span class="sidebar-user__subtitle">Staff IT</span>
                     </div>
                 </a>
             </div> -->
